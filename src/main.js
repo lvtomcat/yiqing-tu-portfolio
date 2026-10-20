@@ -19,15 +19,15 @@ function fillContent() {
 
 function renderWorks() {
   const list = $('[data-works-list]');
-  list.innerHTML = siteContent.works.map((work, index) => `
+  list.innerHTML = siteContent.works.map((work) => `
     <article class="work-item reveal">
-      <button class="work-button" type="button" data-work-index="${index}" aria-label="查看 ${work.title} 的项目详情">
+      <a class="work-button" href="${work.page}" aria-label="查看 ${work.title} 的项目详情">
         <span class="work-number mono">(${work.number})</span>
         <span class="work-title">${work.title}</span>
         <span class="work-category">${work.category}</span>
         <span class="work-arrow" aria-hidden="true">↗</span>
         <span class="work-image-wrap"><img src="${work.image}" alt="${work.imageAlt}" loading="lazy" /></span>
-      </button>
+      </a>
     </article>
   `).join("");
 }
@@ -61,42 +61,6 @@ function renderSocials() {
   $('[data-social-links]').innerHTML = siteContent.socials.map((social) => `
     <li><a href="${social.url}" ${social.url !== "#" ? 'target="_blank" rel="noreferrer"' : ''}>${social.label}<span aria-hidden="true">↗</span><span class="sr-only">${social.note}</span></a></li>
   `).join("");
-}
-
-function setDialog(work) {
-  $('[data-dialog-number]').textContent = `PROJECT / ${work.number}`;
-  $('[data-dialog-category]').textContent = work.category;
-  $('[data-dialog-title]').textContent = work.title;
-  $('[data-dialog-description]').textContent = work.description;
-  $('[data-dialog-image]').src = work.image;
-  $('[data-dialog-image]').alt = work.imageAlt;
-  $('[data-dialog-details]').innerHTML = work.details.map((detail) => `<span>${detail}</span>`).join("");
-  const link = $('[data-dialog-link]');
-  if (work.url) {
-    link.href = work.url;
-    link.textContent = `${work.linkLabel || "查看作品"} ↗`;
-    link.hidden = false;
-  } else {
-    link.hidden = true;
-  }
-  $('[data-dialog-placeholder]').hidden = Boolean(work.url);
-}
-
-function setupDialog() {
-  const dialog = $('[data-dialog]');
-  document.addEventListener("click", (event) => {
-    const trigger = event.target.closest("[data-work-index]");
-    if (trigger) {
-      const work = siteContent.works[Number(trigger.dataset.workIndex)];
-      setDialog(work);
-      dialog.showModal();
-      $('[data-dialog-close]').focus();
-    }
-  });
-  $('[data-dialog-close]').addEventListener("click", () => dialog.close());
-  dialog.addEventListener("click", (event) => {
-    if (event.target === dialog) dialog.close();
-  });
 }
 
 function setupMenu() {
@@ -137,6 +101,5 @@ renderServices();
 renderBackground();
 renderAchievements();
 renderSocials();
-setupDialog();
 setupMenu();
 setupReveal();
