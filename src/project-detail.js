@@ -36,7 +36,7 @@
   `;
   const imageGallery = detailImages.length ? `
     <section class="project-section project-gallery">
-      <p class="project-section-label mono">[完整图片展示]</p>
+      <p class="project-section-label mono">[${detail.galleryTitle || "完整图片展示"}]</p>
       <div class="project-media-list">
         ${detailImages.map(renderImage).join("")}
       </div>

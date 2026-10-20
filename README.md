@@ -25,6 +25,7 @@ python3 -m http.server 4174
 - `detail.roles`、`detail.process`、`detail.outcomes`：职责、过程、成果列表（没有内容可删掉）
 - `detail.sections`：可选的自定义内容区块；可填写 `title`、`paragraphs`（多段文字）和 `items`（列表）
 - `detail.caseStudies`：同一 Project 内的多个成果案例；每个案例可填写 `title`、`summary`、`metrics`、`images` 和可选的 `url`
+- `detail.galleryTitle`：可选的图片展示区标题，例如「自制封面展示」
 - `detail.images`：完整展示图片的数组；每项填写 `src`、`alt` 和可选的 `caption`
 
 详情页文件位于 `projects/project-01.html` 至 `projects/project-05.html`。它们共用 `src/project-detail.js`，因此通常只需要修改 `src/content.js`，无需改页面结构。

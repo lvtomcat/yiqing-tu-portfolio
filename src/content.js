@@ -119,8 +119,11 @@ window.siteContent = {
         background: "将故事关系、类型氛围与投放场景转译为清晰的封面方向，帮助读者在第一眼理解作品的叙事承诺。",
         roles: ["视觉关键词与人物关系拆解", "AI 辅助封面方向探索", "封面与 blurb 的叙事一致性校对"],
         process: ["提炼题材、人物与情绪关键词", "生成并比较不同视觉方向", "根据投放场景筛选与迭代"],
+        galleryTitle: "自制封面展示",
         images: [
-          { src: "https://images.unsplash.com/photo-1634017839464-5c339ebe3cb4?auto=format&fit=crop&w=1400&q=85", alt: "抽象蓝紫色数字艺术画面", caption: "可替换为封面方向稿、提示词过程图或最终素材。" }
+          { src: "../images/cover-the-bet.jpg", alt: "The Bet He Wasn't Supposed To Win 自制封面", caption: "自制封面 / The Bet He Wasn't Supposed To Win" },
+          { src: "../images/cover-the-ceo-above-my-desk.jpg", alt: "The CEO Above My Desk 自制封面", caption: "自制封面 / The CEO Above My Desk" },
+          { src: "../images/cover-the-vampires-obsession.png", alt: "The Vampire's Obsession 自制封面", caption: "自制封面 / The Vampire's Obsession" }
         ]
       }
     },
