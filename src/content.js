@@ -34,12 +34,14 @@ export const siteContent = {
   works: [
     {
       number: "01",
-      title: "签约到商业化的内容陪跑",
+      title: "The CEO Above My Desk",
       category: "编辑作品：签约、培养与商业化跟进",
-      description: "从作者筛选、选题判断到创作节奏与商业化节点，为一部类型小说建立完整的成长路线。",
-      image: "https://images.unsplash.com/photo-1455390582262-044cdead277a?auto=format&fit=crop&w=1400&q=85",
-      imageAlt: "写满笔记的纸张与钢笔",
-      details: ["作者沟通与签约判断", "章节节奏与内容结构反馈", "投放前内容资产梳理"]
+      description: "从作品判断、签约与作者协作，到内容包装和商业化推进，完整跟进一部办公室浪漫题材作品的成长路径。",
+      image: "./images/the-ceo-above-my-desk-ranking.jpg",
+      imageAlt: "AnyStories 平台上 The CEO Above My Desk 的 660 万阅读展示截图",
+      details: ["6.6M 阅读量", "单本利润突破 US$2M", "234 章 · 已完结", "签约 · 内容跟进 · 商业化推进"],
+      url: "https://www.anystories.app/book/the-ceo-above-my-desk/695cadd8aa733e88f9958e41",
+      linkLabel: "查看作品页"
     },
     {
       number: "02",

@@ -61,6 +61,15 @@ function setDialog(work) {
   $('[data-dialog-image]').src = work.image;
   $('[data-dialog-image]').alt = work.imageAlt;
   $('[data-dialog-details]').innerHTML = work.details.map((detail) => `<span>${detail}</span>`).join("");
+  const link = $('[data-dialog-link]');
+  if (work.url) {
+    link.href = work.url;
+    link.textContent = `${work.linkLabel || "查看作品"} ↗`;
+    link.hidden = false;
+  } else {
+    link.hidden = true;
+  }
+  $('[data-dialog-placeholder]').hidden = Boolean(work.url);
 }
 
 function setupDialog() {
