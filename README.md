@@ -24,7 +24,8 @@ python3 -m http.server 4174
 - `detail.background`：项目背景（没有内容可删掉）
 - `detail.roles`、`detail.process`、`detail.outcomes`：职责、过程、成果列表（没有内容可删掉）
 - `detail.sections`：可选的自定义内容区块；可填写 `title`、`paragraphs`（多段文字）和 `items`（列表）
-- `detail.caseStudies`：同一 Project 内的多个成果案例；每个案例可填写 `title`、`summary`、`metrics`、`images` 和可选的 `url`
+- `detail.caseStudies`：同一 Project 内的多个成果案例；每个案例可填写 `title`、`summary`、`metrics`、`sections`、`images` 和可选的 `url`
+- `caseStudies[].sections`：案例内的文字模块；每项填写 `title` 与 `paragraphs`，适合展示多组 blurb 或投放文案
 - `detail.galleryTitle`：可选的图片展示区标题，例如「自制封面展示」
 - `detail.images`：完整展示图片的数组；每项填写 `src`、`alt` 和可选的 `caption`
 

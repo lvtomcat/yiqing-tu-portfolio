@@ -141,8 +141,101 @@ window.siteContent = {
         background: "为不同题材找到更准确的故事入口，把人物关系、冲突与悬念转化为可被快速理解的文字表达。",
         roles: ["故事卖点与读者钩子提炼", "blurb、tag 与广告文案撰写", "封面、内容与投放素材协同"],
         process: ["拆解题材期待与核心冲突", "形成多版本文字方向", "结合数据与反馈持续优化"],
-        images: [
-          { src: "https://images.unsplash.com/photo-1456324504439-367cee3b3c32?auto=format&fit=crop&w=1400&q=85", alt: "电脑屏幕上的文字编辑界面", caption: "可替换为 blurb、投放文案或素材迭代截图。" }
+        caseStudiesTitle: "文案案例",
+        caseStudies: [
+          {
+            number: "01",
+            title: "Scarred Hearts, Twisted Fate",
+            summary: "围绕背叛、重逢与女性成长主线，完成 blurb 与三组投放文案方向。",
+            metrics: [
+              { label: "阅读量", value: "44.2K" },
+              { label: "单本利润", value: "超过 US$10K" },
+              { label: "文案内容", value: "Blurb + 3 组投放文案" }
+            ],
+            url: "https://www.anystories.app/book/scarred-hearts-twisted-fate/68647e33b108307b2378ca5d",
+            linkLabel: "查看作品页",
+            sections: [
+              {
+                title: "投放文案 01",
+                paragraphs: [
+                  "\"I don't need you,\" I whispered, and for the first time, I meant it.",
+                  "Rex stood before me, offering me the world. Money. Power. His name. He wanted to fix it. He wanted to be a father. He wanted me back in his bed. But he looked at a woman who had walked through fire and come out made of gold. \"You broke me, Rex,\" I said calmly. \"But I rebuilt myself.\" I looked at my mansion, my company, my happy children. \"I have everything I ever wanted. And none of it came from you.\" I closed the door in his face, leaving him in the cold, finally realizing that the best revenge isn't hate. It's indifference."
+                ]
+              },
+              {
+                title: "投放文案 02",
+                paragraphs: [
+                  "She opened the door, and her world shattered.",
+                  "Ann stood frozen. The bass of the party thumped downstairs, but in this room, the only sounds were moans and skin slapping against skin. There they were. Rex, the boy who promised to love her forever just days ago. Judith, her best friend, the sister she never had. They were naked. Tangled together. Judith was riding him, head thrown back in ecstasy.",
+                  "Rex opened his eyes. He saw Ann. \"Shit! Ann!\" He shoved Judith off, scrambling to cover himself. \"I can explain!\" he begged, chasing her down the street. \"I just wanted a reaction! I wanted to make you jealous!\"",
+                  "Ann stopped running. She turned, tears streaming down her face, looking at the man she gave her firsts to. \"You broke me because you wanted a reaction?\" she whispered. \"Congratulations, Rex. You win.\" She walked away into the darkness, leaving him with his lies. He didn't know it was the last time he would see her for six years. And he certainly didn't know she was carrying his twins."
+                ]
+              },
+              {
+                title: "投放文案 03",
+                paragraphs: [
+                  "He stared at the magazine cover, and the air left his lungs—because the little boy staring back had his exact storm-grey eyes.",
+                  "Rex Radford hadn’t felt fear in years. Not until this moment. The headline screamed: \"Annie Yin: All About Her Life And Her Twins.\" But it wasn’t the woman that froze his blood; it was the boy. The boy looked like a carbon copy of Rex at age six. The same jawline. The same intense stare. And the girl beside him… she was the spitting image of the woman he had destroyed six years ago.",
+                  "\"It can't be,\" he whispered, his hands trembling as they gripped the glossy paper. He had been married to Judith for six years—a cold, barren marriage built on lies and a stillbirth. He thought he had buried the past. He thought Ann McBrown was gone forever, erased from the world after he broke her heart.",
+                  "But she wasn’t gone. She was back. She was Annie Yin now—a global fashion mogul, untouchable and radiant. And she had kept a secret that was about to bring the entire Radford empire to its knees.",
+                  "\"Did you know?\" Rex’s voice was a low growl as he turned to Judith. \"Did you know she was pregnant when she left?!\" Judith’s face went pale, her glass of wine shaking in her hand. \"Rex, don't be ridiculous. Those children could belong to anyone...\"",
+                  "\"Anyone?!\" he roared, slamming the magazine down. \"That boy has my face, Judith! He has my face!\" Rex grabbed his coat. He didn't care about the scandal. He didn't care about his reputation. He was going to find Annie Yin. He was going to find out why she hid his children for six years—and he was going to take back what was his."
+                ]
+              }
+            ],
+            images: [
+              { src: "../images/scarred-hearts-twisted-fate-overview.png", alt: "Scarred Hearts, Twisted Fate 的 AnyStories 平台页面截图", caption: "平台页面 / Scarred Hearts, Twisted Fate" },
+              { src: "../images/scarred-hearts-twisted-fate-blurb.png", alt: "Scarred Hearts, Twisted Fate 的编辑撰写 blurb 截图", caption: "编辑撰写的 Blurb / Scarred Hearts, Twisted Fate" }
+            ]
+          },
+          {
+            number: "02",
+            title: "The Volkov Legacy",
+            summary: "围绕黑手党、秘密孩子与危险重逢的题材承诺，完成 blurb 与三组投放文案方向。",
+            metrics: [
+              { label: "阅读量", value: "104.4K" },
+              { label: "单本利润", value: "超过 US$10K" },
+              { label: "文案内容", value: "Blurb + 3 组投放文案" }
+            ],
+            url: "https://www.anystories.app/book/the-volkov-legacy/68b098388c7d08441837fcaf",
+            linkLabel: "查看作品页",
+            sections: [
+              {
+                title: "投放文案 01",
+                paragraphs: [
+                  "“You can’t go, Maggie. Jamie is a Volkov—and so are you now.”",
+                  "The words hit harder than a bullet. I clutched my son as Dominic Volkov closed in. He wasn’t just the man who bent me over a Vegas balcony and fucked me senseless—he was the Bratva boss.",
+                  "“This is kidnapping,” I snapped.",
+                  "“Call it survival.” His hard body pressed into mine, his erection unmistakable. Whiskey, blood, sex—him. “A war is coming. Leave, you die. Stay…” His fingers grazed my breast, then Jamie’s cheek. “You live by my rules. In my bed.”",
+                  "I hated him. But my body remembered exactly who owned it."
+                ]
+              },
+              {
+                title: "投放文案 02",
+                paragraphs: [
+                  "\"I'm not just a member of the mafia, Maggie. I am the Boss.\"",
+                  "The words hit her harder than the freezing Russian wind outside. Maggie stared at the man standing in front of her—Dominic Volkov. The man she had spent a passionate weekend with in Las Vegas two years ago, the man she thought was just a charming waiter, was actually the most dangerous man in Moscow.",
+                  "She had raised their son, Jamie, in secret, hiding him from the world, until the Italian mafia snatched him from her arms just to get to Dominic. Now, standing in his heavily guarded mansion, surrounded by men with guns who bowed to his every command, she realized the terrifying truth. Her son wasn't just a baby; he was the heir to a criminal empire.",
+                  "\"You lied to me,\" she whispered, her voice trembling not with fear, but with fury. \"You let me believe you were no one.\" Dominic took a step closer, his dark eyes burning with a possessiveness that made her knees weak. He wiped a smudge of blood from his cheek—blood that wasn't his. \"I didn't lie. I just didn't tell you that I own this city. And now that I know Jamie exists, you are never leaving my sight again.\"",
+                  "He thought he could keep her in a gilded cage? He thought he could claim them just because he killed the men who took Jamie? Maggie looked at the blood on his hands and felt a shiver of horror... and attraction. She had to escape, but how do you run from a man who controls everything?"
+                ]
+              },
+              {
+                title: "投放文案 03",
+                paragraphs: [
+                  "\"I don't care about the rules. I make them.\"",
+                  "Dominic Volkov walked into the room, his shirt stained with the blood of his enemies, his eyes dark with a murderous lust. He saw Maggie trying to hide, terrified of the violence he represented.",
+                  "\"Come here,\" he commanded, unbuckling his belt. The sound of leather snapping echoed in the silent room.",
+                  "\"Dominic, you're bleeding...\" she stammered. \"It's not my blood.\" He grabbed her by the hair, pulling her head back to expose her throat. He licked the pulse point, tasting her fear. \"Killing makes me hard, Maggie. And I need to bury myself inside you to forget what I just did.\"",
+                  "He didn't wait for her to agree. He bent her over the table, hiking up her skirt. \"You think I'm a monster? Let me show you what a monster does to what he owns.\" He entered her in one thrust, rough and demanding. Maggie screamed, her nails digging into the wood, as the most powerful man in Russia used her body to cleanse his soul."
+                ]
+              }
+            ],
+            images: [
+              { src: "../images/the-volkov-legacy-overview.png", alt: "The Volkov Legacy 的 AnyStories 平台页面截图", caption: "平台页面 / The Volkov Legacy" },
+              { src: "../images/the-volkov-legacy-blurb.png", alt: "The Volkov Legacy 的编辑撰写 blurb 截图", caption: "编辑撰写的 Blurb / The Volkov Legacy" }
+            ]
+          }
         ]
       }
     },
