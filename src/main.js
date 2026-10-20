@@ -1,4 +1,8 @@
-import { siteContent } from "./content.js";
+const { siteContent } = window;
+
+if (!siteContent) {
+  throw new Error("作品集内容未加载：请确认 content.js 在 main.js 之前引入。");
+}
 
 const $ = (selector, parent = document) => parent.querySelector(selector);
 const $$ = (selector, parent = document) => [...parent.querySelectorAll(selector)];
