@@ -47,6 +47,12 @@ function renderBackground() {
   `).join("");
 }
 
+function renderAchievements() {
+  $('[data-achievement-list]').innerHTML = siteContent.achievements.map((item) => `
+    <div><dt>${item.value}</dt><dd>${item.label}</dd></div>
+  `).join("");
+}
+
 function renderSocials() {
   $('[data-social-links]').innerHTML = siteContent.socials.map((social) => `
     <li><a href="${social.url}" ${social.url !== "#" ? 'target="_blank" rel="noreferrer"' : ''}>${social.label}<span aria-hidden="true">↗</span><span class="sr-only">${social.note}</span></a></li>
@@ -125,6 +131,7 @@ fillContent();
 renderWorks();
 renderServices();
 renderBackground();
+renderAchievements();
 renderSocials();
 setupDialog();
 setupMenu();
