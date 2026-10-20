@@ -56,8 +56,52 @@ window.siteContent = {
         roles: ["作品判断与签约推进", "作者沟通、创作节奏与内容跟进", "封面、blurb、tag 与投放素材协同"],
         process: ["梳理题材承诺、人物关系与读者预期", "结合内容与数据反馈迭代叙事节奏和包装表达", "推进作品从创作、上线到商业化阶段的协作"],
         outcomes: ["6.6M 阅读量", "单本利润突破 US$2M", "234 章，已完结"],
-        images: [
-          { src: "../images/the-ceo-above-my-desk-ranking.jpg", alt: "AnyStories 平台上 The CEO Above My Desk 的 660 万阅读展示截图", caption: "作品在 AnyStories 平台的阅读量展示。" }
+        caseStudies: [
+          {
+            number: "01",
+            title: "The CEO Above My Desk",
+            summary: "从作品判断、签约与作者协作，到内容包装和商业化推进的完整跟进案例。",
+            metrics: [
+              { label: "阅读量", value: "6.6M" },
+              { label: "单本利润", value: "突破 US$2M" },
+              { label: "作品状态", value: "234 章 · 已完结" }
+            ],
+            url: "https://www.anystories.app/book/the-ceo-above-my-desk/695cadd8aa733e88f9958e41",
+            linkLabel: "查看作品页",
+            images: [
+              { src: "../images/the-ceo-above-my-desk-ranking.jpg", alt: "AnyStories 平台上 The CEO Above My Desk 的 660 万阅读展示截图", caption: "作品在 AnyStories 平台的阅读量展示。" }
+            ]
+          },
+          {
+            number: "02",
+            title: "Married to the Billionaire Who Betrayed Me",
+            summary: "围绕都市情感与背叛反转题材进行内容跟进与商业化推进。",
+            metrics: [
+              { label: "阅读量", value: "313.6K" },
+              { label: "单本利润", value: "超过 US$50K" },
+              { label: "作品状态", value: "263 章 · 连载中" }
+            ],
+            url: "https://www.anystories.app/book/married-to-the-billionaire-who-betrayed-me/69723af9402ac1da5c43c40f",
+            linkLabel: "查看作品页",
+            images: [
+              { src: "../images/married-to-the-billionaire-who-betrayed-me.png", alt: "AnyStories 平台上 Married to the Billionaire Who Betrayed Me 的作品页面截图", caption: "作品在 AnyStories 平台的阅读量展示。" }
+            ]
+          },
+          {
+            number: "03",
+            title: "The Evil Alpha Marked Me",
+            summary: "面向狼人奇幻题材的故事判断、作者协作与商业化跟进案例。",
+            metrics: [
+              { label: "阅读量", value: "195.6K" },
+              { label: "单本利润", value: "超过 US$30K" },
+              { label: "作品状态", value: "179 章 · 已完结" }
+            ],
+            url: "https://www.anystories.app/book/the-evil-alpha-marked-me/6863b47ee07e05a1778caf75",
+            linkLabel: "查看作品页",
+            images: [
+              { src: "../images/the-evil-alpha-marked-me.png", alt: "AnyStories 平台上 The Evil Alpha Marked Me 的作品页面截图", caption: "作品在 AnyStories 平台的阅读量展示。" }
+            ]
+          }
         ]
       }
     },

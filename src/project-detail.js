@@ -16,24 +16,49 @@
   const previous = siteContent.works[(projectIndex - 1 + siteContent.works.length) % siteContent.works.length];
   const next = siteContent.works[(projectIndex + 1) % siteContent.works.length];
   const detail = project.detail || {};
+  const detailImages = detail.images || [];
+  const caseStudies = detail.caseStudies || [];
+  const caseImages = caseStudies.flatMap((caseStudy) => caseStudy.images || []);
+  const images = [...detailImages, ...caseImages];
   const list = (items) => items?.length ? `<ul>${items.map((item) => `<li>${item}</li>`).join("")}</ul>` : "";
   const section = (title, content) => content ? `<section class="project-section"><p class="project-section-label mono">[${title}]</p>${content}</section>` : "";
   const customSections = detail.sections?.map((item) => {
     const paragraphs = item.paragraphs?.map((paragraph) => `<p>${paragraph}</p>`).join("") || "";
     return section(item.title, `${paragraphs}${list(item.items)}`);
   }).join("") || "";
-  const imageGallery = detail.images?.length ? `
+  const renderImage = (image, index) => `
+    <figure class="project-media ${image.orientation ? `is-${image.orientation}` : ""}">
+      <button class="project-image-button" type="button" data-lightbox-image="${index}" aria-label="查看 ${image.alt} 完整大图">
+        <img src="${image.src}" alt="${image.alt}" loading="lazy" />
+      </button>
+      ${image.caption ? `<figcaption>${image.caption}</figcaption>` : ""}
+    </figure>
+  `;
+  const imageGallery = detailImages.length ? `
     <section class="project-section project-gallery">
       <p class="project-section-label mono">[完整图片展示]</p>
       <div class="project-media-list">
-        ${detail.images.map((image, index) => `
-          <figure class="project-media ${image.orientation ? `is-${image.orientation}` : ""}">
-            <button class="project-image-button" type="button" data-lightbox-image="${index}" aria-label="查看 ${image.alt} 完整大图">
-              <img src="${image.src}" alt="${image.alt}" loading="lazy" />
-            </button>
-            ${image.caption ? `<figcaption>${image.caption}</figcaption>` : ""}
-          </figure>
-        `).join("")}
+        ${detailImages.map(renderImage).join("")}
+      </div>
+    </section>
+  ` : "";
+  const caseStudiesMarkup = caseStudies.length ? `
+    <section class="project-section project-case-studies">
+      <p class="project-section-label mono">[成果案例]</p>
+      <div class="project-case-list">
+        ${caseStudies.map((caseStudy, caseIndex) => {
+          const imageOffset = detailImages.length + caseStudies.slice(0, caseIndex).reduce((total, item) => total + (item.images || []).length, 0);
+          return `
+            <article class="project-case-study">
+              <p class="project-case-number mono">CASE / ${caseStudy.number || String(caseIndex + 1).padStart(2, "0")}</p>
+              <h2>${caseStudy.title}</h2>
+              ${caseStudy.summary ? `<p class="project-case-summary">${caseStudy.summary}</p>` : ""}
+              ${caseStudy.metrics?.length ? `<dl class="project-case-metrics">${caseStudy.metrics.map((metric) => `<div><dt class="mono">${metric.label}</dt><dd>${metric.value}</dd></div>`).join("")}</dl>` : ""}
+              ${caseStudy.images?.length ? `<div class="project-case-media-list">${caseStudy.images.map((image, imageIndex) => renderImage(image, imageOffset + imageIndex)).join("")}</div>` : ""}
+              ${caseStudy.url ? `<a class="project-case-external mono" href="${caseStudy.url}" target="_blank" rel="noreferrer">${caseStudy.linkLabel || "查看外部作品"} ↗</a>` : ""}
+            </article>
+          `;
+        }).join("")}
       </div>
     </section>
   ` : "";
@@ -55,8 +80,9 @@
         ${section("项目成果与关键数据", list(detail.outcomes || project.details))}
       </div>
       ${customSections}
+      ${caseStudiesMarkup}
       ${imageGallery}
-      ${project.url ? `<a class="project-external mono" href="${project.url}" target="_blank" rel="noreferrer">${project.linkLabel || "查看外部作品"} ↗</a>` : ""}
+      ${project.url && !caseStudies.length ? `<a class="project-external mono" href="${project.url}" target="_blank" rel="noreferrer">${project.linkLabel || "查看外部作品"} ↗</a>` : ""}
       <nav class="project-pagination" aria-label="项目翻页">
         <a href="${previous.page.replace("./projects/", "")}"><span class="mono">← 上一个</span><strong>${previous.title}</strong></a>
         <a href="${next.page.replace("./projects/", "")}"><span class="mono">下一个 →</span><strong>${next.title}</strong></a>
@@ -73,7 +99,6 @@
   `;
 
   const lightbox = document.querySelector("[data-image-lightbox]");
-  const images = detail.images || [];
   document.addEventListener("click", (event) => {
     const trigger = event.target.closest("[data-lightbox-image]");
     if (trigger) {
