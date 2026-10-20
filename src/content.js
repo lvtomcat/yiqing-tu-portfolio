@@ -34,12 +34,12 @@ export const siteContent = {
   works: [
     {
       number: "01",
-      title: "The CEO Above My Desk",
+      title: "长篇网文的全链路编辑",
       category: "编辑作品：签约、培养与商业化跟进",
-      description: "从作品判断、签约与作者协作，到内容包装和商业化推进，完整跟进一部办公室浪漫题材作品的成长路径。",
+      description: "从作品判断、签约与作者协作，到内容包装和商业化推进；《The CEO Above My Desk》是其中一部完整跟进的成果案例。",
       image: "./images/the-ceo-above-my-desk-ranking.jpg",
       imageAlt: "AnyStories 平台上 The CEO Above My Desk 的 660 万阅读展示截图",
-      details: ["6.6M 阅读量", "单本利润突破 US$2M", "234 章 · 已完结", "签约 · 内容跟进 · 商业化推进"],
+      details: ["案例：《The CEO Above My Desk》", "6.6M 阅读量", "单本利润突破 US$2M", "234 章 · 已完结", "签约 · 内容跟进 · 商业化推进"],
       url: "https://www.anystories.app/book/the-ceo-above-my-desk/695cadd8aa733e88f9958e41",
       linkLabel: "查看作品页"
     },
