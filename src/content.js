@@ -243,17 +243,65 @@ window.siteContent = {
       number: "04",
       slug: "project-04",
       page: "./projects/project-04.html",
-      title: "在纸上建造另一个世界",
-      category: "个人文学创作",
-      description: "个人写作练习：在叙事的速度与停顿之间，持续寻找人物、情感与语言的精确位置。",
-      image: "https://images.unsplash.com/photo-1516979187457-637abb4f9353?auto=format&fit=crop&w=1400&q=85",
-      imageAlt: "打开的书籍与暖色书页",
-      details: ["短篇与非虚构写作", "人物关系与叙述视角实验", "持续更新中"],
+      title: "让内容成为平台与作者之间的桥梁",
+      englishTitle: "Platform Content Operations & Author Engagement",
+      category: "平台内容运营 · 英文 FAQ · 征文活动文案",
+      description: "围绕海外网络文学平台的作者服务与内容供给需求，参与英文 FAQ 知识内容建设及专题征文活动文案撰写。通过信息结构化、规则说明和创作主题包装，支持平台与作者之间的沟通及内容运营。",
+      homeDescription: "围绕海外网络文学平台的作者服务与内容供给需求，参与英文 FAQ 知识内容建设及专题征文活动文案撰写。",
+      platform: "NovelSnack",
+      details: ["作者服务与英文知识内容", "平台规则说明与信息结构化", "征文活动英文文案"],
       detail: {
-        background: "持续进行个人文学创作，在人物、情感与语言之间寻找更精确的叙事位置。",
-        roles: ["短篇与非虚构写作", "人物关系与叙述视角实验", "文本修订与长期创作练习"],
-        images: [
-          { src: "https://images.unsplash.com/photo-1516979187457-637abb4f9353?auto=format&fit=crop&w=1400&q=85", alt: "打开的书籍与暖色书页", caption: "可替换为已公开的作品节选、书页或阅读活动素材。" }
+        background: "围绕海外网络文学平台的作者服务与内容供给需求，参与英文 FAQ 知识内容建设及专题征文活动文案撰写。",
+        roles: ["英文 FAQ 内容撰写与整理", "平台规则与作者服务信息表达", "征文活动英文文案撰写"],
+        outcomes: ["支持作者便捷查找规则说明与操作参考", "支持平台与作者之间的日常沟通", "支持主题征文活动的信息传达与作者参与引导"],
+        caseStudiesTitle: "EDITORIAL CASE STUDIES",
+        caseStudies: [
+          {
+            number: "01",
+            title: "Author FAQ & Knowledge Base",
+            summary: "英文 FAQ 与作者知识内容建设",
+            sectionsBeforeMedia: true,
+            sections: [
+              {
+                title: "项目背景",
+                paragraphs: ["面向海外网络文学作者，平台需要提供清晰的英文信息，帮助作者理解签约流程、作品管理、支付相关规则和常见操作问题。"]
+              },
+              {
+                title: "我的工作",
+                items: ["参与英文 FAQ 内容撰写与整理", "围绕作者常见问题组织知识内容", "将平台规则转化为容易理解的英文说明", "优化内容表达的清晰度与可读性"]
+              },
+              {
+                title: "项目价值",
+                paragraphs: ["通过结构化的 FAQ 内容，为作者提供便于查找的规则说明与操作参考，支持平台作者服务与日常沟通。"]
+              }
+            ],
+            images: [],
+            url: "https://www.novelsnack.com/faq",
+            linkLabel: "VIEW FAQ"
+          },
+          {
+            number: "02",
+            title: "Suspense Customize Story Contest",
+            summary: "悬疑题材定制征文活动 · NovelSnack · 2025.10.15–2026.01.31",
+            sectionsBeforeMedia: true,
+            sections: [
+              {
+                title: "项目背景",
+                paragraphs: ["面向英文网络文学作者的悬疑题材征文活动，需要通过清晰、有吸引力的英文宣传内容传达征文主题和参与信息。"]
+              },
+              {
+                title: "我的工作",
+                items: ["参与征文活动英文文案撰写", "梳理并表达活动主题与参与信息", "结合悬疑题材特点组织宣传内容", "支持平台的作者招募与活动传播"]
+              },
+              {
+                title: "项目价值",
+                paragraphs: ["将题材策划与运营需求转化为面向作者的活动传播内容，支持平台主题征文活动的信息传达与作者参与引导。"]
+              }
+            ],
+            images: [],
+            url: "https://www.novelsnack.com/viewsworkspace/68ef85ae7c4752d6b97eff45",
+            linkLabel: "VIEW CAMPAIGN"
+          }
         ]
       }
     },

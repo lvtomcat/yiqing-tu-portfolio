@@ -23,10 +23,10 @@ function renderWorks() {
     <article class="work-item reveal">
       <a class="work-button" href="${work.page}" aria-label="查看 ${work.title} 的项目详情">
         <span class="work-number mono">(${work.number})</span>
-        <span class="work-title">${work.title}</span>
-        <span class="work-category">${work.category}</span>
+        ${work.englishTitle ? `<span class="work-title-group"><span class="work-title">${work.title}</span><span class="work-english-title">${work.englishTitle}</span>${work.platform ? `<span class="work-platform mono">PLATFORM / ${work.platform}</span>` : ""}</span>` : `<span class="work-title">${work.title}</span>`}
+        ${work.homeDescription ? `<span class="work-category-group"><span class="work-category">${work.category}</span><span class="work-description">${work.homeDescription}</span></span>` : `<span class="work-category">${work.category}</span>`}
         <span class="work-arrow" aria-hidden="true">↗</span>
-        <span class="work-image-wrap"><img src="${work.image}" alt="${work.imageAlt}" loading="lazy" /></span>
+        ${work.image ? `<span class="work-image-wrap"><img src="${work.image}" alt="${work.imageAlt}" loading="lazy" /></span>` : ""}
       </a>
     </article>
   `).join("");

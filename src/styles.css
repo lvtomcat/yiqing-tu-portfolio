@@ -76,6 +76,11 @@ button { font: inherit; }
 .work-button { appearance: none; border: 0; color: inherit; background: none; padding: 1.1rem 0; cursor: pointer; width: 100%; display: grid; grid-template-columns: 4.3rem minmax(13rem, 1fr) minmax(10rem, .7fr) 1.5rem; gap: 1rem; text-align: left; align-items: center; position: relative; overflow: hidden; text-decoration: none; }
 .work-number { align-self: start; padding-top: .4rem; color: var(--sun); }
 .work-title { font-size: clamp(1.8rem, 4vw, 4.5rem); letter-spacing: -.085em; line-height: .95; font-weight: 700; transition: transform .45s cubic-bezier(.2,.8,.2,1); }
+.work-title-group { display: grid; gap: .4rem; }
+.work-english-title { max-width: 25rem; color: rgba(244, 237, 220, .78); font: .65rem/1.45 var(--mono); letter-spacing: .025em; }
+.work-platform { color: var(--sun); font-size: .57rem; }
+.work-category-group { display: grid; gap: .75rem; align-self: center; }
+.work-description { color: rgba(244, 237, 220, .78); font-size: .66rem; line-height: 1.65; }
 .work-category { font-size: .7rem; line-height: 1.5; max-width: 11rem; }
 .work-arrow { font-size: 1.4rem; transition: transform .35s ease; }
 .work-image-wrap { position: absolute; width: clamp(9rem, 18vw, 15rem); aspect-ratio: .9; right: 18%; top: 50%; opacity: 0; transform: translateY(-40%) rotate(5deg) scale(.85); transition: opacity .35s ease, transform .45s cubic-bezier(.2,.8,.2,1); pointer-events: none; overflow: hidden; }
@@ -129,6 +134,7 @@ button { font: inherit; }
 .project-meta { display: flex; justify-content: space-between; gap: 2rem; padding-top: .7rem; border-top: 1px solid var(--line); }
 .project-meta span:last-child { text-align: right; color: var(--black); }
 .project-title { max-width: 62rem; margin: clamp(2rem, 6vw, 5rem) 0 1.5rem; font-size: clamp(3.6rem, 10vw, 10rem); font-weight: 900; letter-spacing: -.11em; line-height: .78; }
+.project-english-title { max-width: 42rem; margin: 0 0 1.5rem; color: var(--black); font: .78rem/1.55 var(--mono); letter-spacing: .025em; }
 .project-summary { max-width: 43rem; margin: 0 0 clamp(3.5rem, 8vw, 7rem); color: var(--black); font-size: clamp(1.05rem, 1.7vw, 1.45rem); line-height: 1.7; }
 .project-intro-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); border-top: 1px solid var(--line); border-left: 1px solid var(--line); }
 .project-section { min-height: 14rem; padding: 1rem; border-right: 1px solid var(--line); border-bottom: 1px solid var(--line); }

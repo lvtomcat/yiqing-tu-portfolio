@@ -54,9 +54,10 @@
               <h2>${caseStudy.title}</h2>
               ${caseStudy.summary ? `<p class="project-case-summary">${caseStudy.summary}</p>` : ""}
               ${caseStudy.metrics?.length ? `<dl class="project-case-metrics">${caseStudy.metrics.map((metric) => `<div><dt class="mono">${metric.label}</dt><dd>${metric.value}</dd></div>`).join("")}</dl>` : ""}
+            ${caseStudy.sectionsBeforeMedia ? caseStudy.sections?.map((section) => `<section class="project-case-content"><p class="project-case-content-label mono">[${section.title}]</p>${section.paragraphs?.map((paragraph) => `<p>${paragraph}</p>`).join("") || ""}${list(section.items)}</section>`).join("") || "" : ""}
               ${caseStudy.images?.length ? `<div class="project-case-media-list">${caseStudy.images.map((image, imageIndex) => renderImage(image, imageOffset + imageIndex)).join("")}</div>` : ""}
-              ${caseStudy.url ? `<a class="project-case-external mono" href="${caseStudy.url}" target="_blank" rel="noreferrer">${caseStudy.linkLabel || "查看外部作品"} ↗</a>` : ""}
-              ${caseStudy.sections?.map((section) => `<section class="project-case-content"><p class="project-case-content-label mono">[${section.title}]</p>${section.paragraphs?.map((paragraph) => `<p>${paragraph}</p>`).join("") || ""}${list(section.items)}</section>`).join("") || ""}
+            ${caseStudy.url ? `<a class="project-case-external mono" href="${caseStudy.url}" target="_blank" rel="noopener noreferrer">${caseStudy.linkLabel || "查看外部作品"} ↗</a>` : ""}
+            ${!caseStudy.sectionsBeforeMedia ? caseStudy.sections?.map((section) => `<section class="project-case-content"><p class="project-case-content-label mono">[${section.title}]</p>${section.paragraphs?.map((paragraph) => `<p>${paragraph}</p>`).join("") || ""}${list(section.items)}</section>`).join("") || "" : ""}
             </article>
           `;
         }).join("")}
@@ -71,8 +72,9 @@
       <a class="project-back mono" href="../index.html#works">← 返回作品集</a>
     </header>
     <main class="project-main section-shell">
-      <div class="project-meta mono"><span>PROJECT / ${project.number}</span><span>${project.category}</span></div>
+      <div class="project-meta mono"><span>PROJECT / ${project.number}</span><span>${project.category}</span>${project.platform ? `<span>PLATFORM / ${project.platform}</span>` : ""}</div>
       <h1 class="project-title">${project.title}</h1>
+      ${project.englishTitle ? `<p class="project-english-title">${project.englishTitle}</p>` : ""}
       <p class="project-summary">${project.description}</p>
       <div class="project-intro-grid">
         ${section("项目背景", detail.background ? `<p>${detail.background}</p>` : "")}
@@ -83,7 +85,7 @@
       ${customSections}
       ${caseStudiesMarkup}
       ${imageGallery}
-      ${project.url && !caseStudies.length ? `<a class="project-external mono" href="${project.url}" target="_blank" rel="noreferrer">${project.linkLabel || "查看外部作品"} ↗</a>` : ""}
+      ${project.url && !caseStudies.length ? `<a class="project-external mono" href="${project.url}" target="_blank" rel="noopener noreferrer">${project.linkLabel || "查看外部作品"} ↗</a>` : ""}
       <nav class="project-pagination" aria-label="项目翻页">
         <a href="${previous.page.replace("./projects/", "")}"><span class="mono">← 上一个</span><strong>${previous.title}</strong></a>
         <a href="${next.page.replace("./projects/", "")}"><span class="mono">下一个 →</span><strong>${next.title}</strong></a>
