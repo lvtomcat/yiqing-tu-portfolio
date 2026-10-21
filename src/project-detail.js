@@ -54,9 +54,9 @@
               <h2>${caseStudy.title}</h2>
               ${caseStudy.summary ? `<p class="project-case-summary">${caseStudy.summary}</p>` : ""}
               ${caseStudy.metrics?.length ? `<dl class="project-case-metrics">${caseStudy.metrics.map((metric) => `<div><dt class="mono">${metric.label}</dt><dd>${metric.value}</dd></div>`).join("")}</dl>` : ""}
-              ${caseStudy.sections?.map((section) => `<section class="project-case-content"><p class="project-case-content-label mono">[${section.title}]</p>${section.paragraphs?.map((paragraph) => `<p>${paragraph}</p>`).join("") || ""}${list(section.items)}</section>`).join("") || ""}
               ${caseStudy.images?.length ? `<div class="project-case-media-list">${caseStudy.images.map((image, imageIndex) => renderImage(image, imageOffset + imageIndex)).join("")}</div>` : ""}
               ${caseStudy.url ? `<a class="project-case-external mono" href="${caseStudy.url}" target="_blank" rel="noreferrer">${caseStudy.linkLabel || "查看外部作品"} ↗</a>` : ""}
+              ${caseStudy.sections?.map((section) => `<section class="project-case-content"><p class="project-case-content-label mono">[${section.title}]</p>${section.paragraphs?.map((paragraph) => `<p>${paragraph}</p>`).join("") || ""}${list(section.items)}</section>`).join("") || ""}
             </article>
           `;
         }).join("")}
