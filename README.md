@@ -42,7 +42,7 @@ python3 -m http.server 4174
 
 Performance 位于首页 SERVICES 之后、CONTACT 之前。所有 Sheet 按原顺序直接显示为 HTML 表格，包含完整行列、原始文字和链接。手机端可在表格内左右滑动，也可用键盘聚焦表格区域后按左右方向键。
 
-以后只需在 GitHub 替换 **`assets/documents/Yiqing_Tu_Performance.xlsx`** 并提交到 `main`。仓库的 **Update Performance table** 自动流程会重新生成首页表格、同步 `dist`，再把生成结果保存回仓库。流程完成后可从 Actions 页面查看结果及 `static-website` 发布文件包；现有托管仍需按原方式发布，不会修改域名或公开范围。
+以后只需在 GitHub 替换 **`assets/documents/Yiqing_Tu_Performance.xlsx`** 并提交到 `main`。仓库的 **Build and deploy portfolio** 自动流程会重新生成首页表格、同步 `dist`，再把生成结果保存回仓库并发布到 GitHub Pages。流程完成后可从 Actions 页面查看结果及 `static-website` 发布文件包。
 
 - `src/content.js` 的 `documents.performance.file` 管理原始文件路径。若修改名称，也更新这里的路径；自动流程监听 `assets/documents` 中的 XLSX。
 - Excel 只在构建时读取，访客浏览器不加载 Excel 解析库。首页中的表格已经是静态 HTML，直接双击首页也能看到。
@@ -53,9 +53,15 @@ Performance 位于首页 SERVICES 之后、CONTACT 之前。所有 Sheet 按原�
 
 构建失败时保留上一版网页；在 Actions 修复错误并重新运行即可。若仓库禁止 Actions 写入，请在仓库设置中允许该工作流的读写权限，然后重新运行，不需要把访问令牌写进代码。
 
-## 同步发布目录
+## 自动发布到 GitHub Pages
 
-当前本地托管配置指向 `dist`。`npm run build` 会先根据 Excel 重新生成首页 Performance 表格，再将页面、项目图片和原始文档同步到 `dist`。源文件与 `dist` 一起提交；构建不会更改域名或部署设置。
+公开网址：`https://lvtomcat.github.io/yiqing-tu-portfolio/`。
+
+仓库的 Pages 发布来源使用 GitHub Actions。每次向 `main` 提交代码、文字、图片或 Excel，自动流程都会检查数据、构建 `dist` 并部署，成功后公开网址同步更新。无需手动上传生成的 HTML，也无需额外付费服务。
+
+所有站内链接都使用相对路径，兼容 `/yiqing-tu-portfolio/` 子目录；例如 Project 01 的公开地址为 `https://lvtomcat.github.io/yiqing-tu-portfolio/projects/project-01.html`。项目独立页面直接访问和刷新均由实际 HTML 文件提供。
+
+`npm run build` 会先根据 Excel 重新生成首页 Performance 表格，再将页面、项目图片和原始文档同步到 `dist`。本地原有 `.openai/hosting.json` 只是此前保留的托管配置；本次仅启用 GitHub Pages，不创建第二个线上站点。
 
 ## 替换作品图片
 

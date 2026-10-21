@@ -1,23 +1,17 @@
-name: Update Performance table
+name: Build and deploy portfolio
 
 on:
   push:
     branches: [main]
-    paths:
-      - 'assets/documents/*.xlsx'
-      - 'scripts/**'
-      - 'src/content.js'
-      - 'requirements.txt'
-      - 'package.json'
-      - 'pnpm-lock.yaml'
-      - '.github/workflows/update-performance.yml'
   workflow_dispatch:
 
 permissions:
   contents: write
+  pages: write
+  id-token: write
 
 concurrency:
-  group: update-performance
+  group: github-pages
   cancel-in-progress: false
 
 jobs:
@@ -56,3 +50,21 @@ jobs:
         with:
           name: static-website
           path: dist
+      - uses: actions/configure-pages@v5
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: dist
+
+  deploy:
+    needs: generate
+    runs-on: ubuntu-latest
+    permissions:
+      pages: write
+      id-token: write
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
