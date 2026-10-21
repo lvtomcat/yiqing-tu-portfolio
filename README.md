@@ -1,6 +1,6 @@
 # 涂奕晴个人作品集
 
-这是一个无构建依赖的静态网站，可直接打开 `index.html`，也可在项目目录启动本地服务器：
+这是一个无框架依赖的静态网站，可直接打开 `index.html`，也可在项目目录启动本地服务器：
 
 ```bash
 python3 -m http.server 4174
@@ -16,7 +16,7 @@ python3 -m http.server 4174
 - `background`：About 区域的三张经历／能力信息卡
 - `email`：会同步更新首屏和联系区的邮件链接
 - `socials`：将每项的 `url: "#"` 换成你的真实主页链接
-- `works`：五个作品的标题、类别、首页卡片和详情页内容
+- `works`：四个作品的标题、类别、首页卡片和详情页内容
 
 每个作品都包含：
 
@@ -29,7 +29,19 @@ python3 -m http.server 4174
 - `detail.galleryTitle`：可选的图片展示区标题，例如「自制封面展示」
 - `detail.images`：完整展示图片的数组；每项填写 `src`、`alt` 和可选的 `caption`
 
-详情页文件位于 `projects/project-01.html` 至 `projects/project-05.html`。它们共用 `src/project-detail.js`，因此通常只需要修改 `src/content.js`，无需改页面结构。
+详情页文件位于 `projects/project-01.html` 至 `projects/project-04.html`。它们共用 `src/project-detail.js`，因此通常只需要修改 `src/content.js`，无需改页面结构。
+
+## 更新简历与业绩文件
+
+- 简历页面：`resume.html`；直接替换 `assets/documents/Yiqing_Tu_Resume.pdf`，保留文件名。
+- 业绩页面：`performance.html`；直接替换 `assets/documents/Yiqing_Tu_Performance.xlsx`，保留文件名。
+- 如果更换文件名，在 `src/content.js` 的 `documents.resume.file` 或 `documents.performance.file` 修改路径。
+- 网页上的业绩数字位于 `documents.performance.metrics`，换表后请按新表核实更新；网页不会自动读取 Excel。
+- 原始文件直接供预览或下载，网站不会改变 PDF 排版或 Excel 数据与公式。
+
+## 同步发布目录
+
+当前托管配置指向 `dist`。修改完成后运行 `npm run build`，将页面、项目图片和文档同步到 `dist`，然后把源文件与 `dist` 一起提交到 GitHub。构建只复制文件，不更改域名或部署设置。
 
 ## 替换作品图片
 

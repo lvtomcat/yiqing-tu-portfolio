@@ -14,6 +14,8 @@ function fillContent() {
   $$('[data-content="email"]').forEach((el) => { el.textContent = siteContent.email; });
   $$('[data-content="about"]').forEach((el) => { el.textContent = siteContent.about; });
   $$('[data-email-link]').forEach((el) => { el.href = `mailto:${siteContent.email}`; });
+  $$('[data-resume-link]').forEach((el) => { el.href = siteContent.documents.resume.page; });
+  $$('[data-performance-link]').forEach((el) => { el.href = siteContent.documents.performance.page; });
   $$('[data-year]').forEach((el) => { el.textContent = new Date().getFullYear(); });
 }
 
