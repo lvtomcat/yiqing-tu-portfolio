@@ -40,25 +40,15 @@ window.siteContent = {
   ],
   documents: {
     resume: {
-      page: "./resume.html",
-      file: "./assets/documents/Yiqing_Tu_Resume.pdf",
-      title: "Resume",
-      intro: "完整简历原件，可在线阅读或下载保存。",
-      downloadLabel: "DOWNLOAD RESUME"
+      sourcePdf: "./assets/documents/Yiqing_Tu_Resume.pdf",
+      // 将 PDF 每一页单独转成图片，按页码顺序添加；不要裁剪或拼接。
+      pages: [
+        { src: "./images/resume-page-01.webp", alt: "涂奕晴完整个人简历，第 1 页，共 1 页", width: 2481, height: 3508 }
+      ]
     },
     performance: {
-      page: "./performance.html",
-      file: "./assets/documents/Yiqing_Tu_Performance.xlsx",
-      title: "Performance",
-      intro: "基于《涂奕晴海外网文编辑优质书》原始工作簿的汇总展示；网页仅呈现关键指标，完整明细可下载查看。",
-      sourceNote: "统计口径：工作簿“优质书”中的 32 条作品记录；Views 字段按原表 K/M 单位换算后汇总。",
-      downloadLabel: "DOWNLOAD EXCEL",
-      metrics: [
-        { value: "32", label: "收录作品", text: "原始业绩表中记录的作品数量。" },
-        { value: "10.89M", label: "累计 Views", text: "32 条作品记录中 Views 数值的合计。" },
-        { value: "6.6M", label: "最高单本 Views", text: "业绩表中单本作品的最高 Views 数值。" },
-        { value: "10", label: "100K+ Views 作品", text: "Views 达到或超过 100K 的作品数量。" }
-      ]
+      // 每次构建从这个原始工作簿生成全部 Sheet 的静态表格。
+      file: "./assets/documents/Yiqing_Tu_Performance.xlsx"
     }
   },
   works: [

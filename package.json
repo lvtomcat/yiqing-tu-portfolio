@@ -5,6 +5,11 @@
   "scripts": {
     "dev": "python3 -m http.server 4174",
     "build": "node scripts/build.mjs",
+    "generate:performance": "node scripts/generate-performance.mjs",
+    "test": "node --test tests/performance.test.mjs",
     "preview": "python3 -m http.server 4174"
+  },
+  "devDependencies": {
+    "ssf": "0.11.2"
   }
 }

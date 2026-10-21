@@ -14,9 +14,15 @@ function fillContent() {
   $$('[data-content="email"]').forEach((el) => { el.textContent = siteContent.email; });
   $$('[data-content="about"]').forEach((el) => { el.textContent = siteContent.about; });
   $$('[data-email-link]').forEach((el) => { el.href = `mailto:${siteContent.email}`; });
-  $$('[data-resume-link]').forEach((el) => { el.href = siteContent.documents.resume.page; });
-  $$('[data-performance-link]').forEach((el) => { el.href = siteContent.documents.performance.page; });
   $$('[data-year]').forEach((el) => { el.textContent = new Date().getFullYear(); });
+}
+
+function renderResume() {
+  $('[data-resume-pages]').innerHTML = siteContent.documents.resume.pages.map((page, index) => `
+    <figure class="resume-page">
+      <img class="resume-image" src="${page.src}" alt="${page.alt}" width="${page.width}" height="${page.height}" loading="${index === 0 ? "eager" : "lazy"}" decoding="async" />
+    </figure>
+  `).join("");
 }
 
 function renderWorks() {
@@ -98,6 +104,7 @@ function setupReveal() {
 }
 
 fillContent();
+renderResume();
 renderWorks();
 renderServices();
 renderBackground();
