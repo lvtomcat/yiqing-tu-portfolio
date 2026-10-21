@@ -247,7 +247,6 @@ window.siteContent = {
       englishTitle: "Platform Content Operations & Author Engagement",
       category: "平台内容运营 · 英文 FAQ · 征文活动文案",
       description: "围绕海外网络文学平台的作者服务与内容供给需求，参与英文 FAQ 知识内容建设及专题征文活动文案撰写。通过信息结构化、规则说明和创作主题包装，支持平台与作者之间的沟通及内容运营。",
-      homeDescription: "围绕海外网络文学平台的作者服务与内容供给需求，参与英文 FAQ 知识内容建设及专题征文活动文案撰写。",
       platform: "NovelSnack",
       details: ["作者服务与英文知识内容", "平台规则说明与信息结构化", "征文活动英文文案"],
       detail: {
@@ -302,25 +301,6 @@ window.siteContent = {
             url: "https://www.novelsnack.com/viewsworkspace/68ef85ae7c4752d6b97eff45",
             linkLabel: "VIEW CAMPAIGN"
           }
-        ]
-      }
-    },
-    {
-      number: "05",
-      slug: "project-05",
-      page: "./projects/project-05.html",
-      title: "让内容找到它的读者",
-      category: "新媒体内容与传播",
-      description: "覆盖电视栏目与个人账号运营：从热点判断、选题与脚本，到平台传播与活动运营，让内容获得更明确的传播反馈。",
-      image: "https://images.unsplash.com/photo-1499750310107-5fef28a66643?auto=format&fit=crop&w=1400&q=85",
-      imageAlt: "笔记本电脑与桌面上的写作工具",
-      details: ["小红书账号：1,200+ 粉丝 · 20,000+ 获赞 · 单篇 70,000+ 阅读", "电视栏目：合作学校 70+ 所 · 覆盖师生近 100,000 人", "选题、脚本、视频制作与活动运营"],
-      detail: {
-        background: "覆盖电视栏目与个人账号运营，以选题、脚本、内容生产和活动运营为路径，持续验证内容传播效果。",
-        roles: ["热点与受众洞察", "选题、脚本与内容生产", "活动运营与平台传播节奏设计"],
-        outcomes: ["小红书账号：1,200+ 粉丝、20,000+ 获赞、单篇 70,000+ 阅读", "电视栏目：合作学校 70+ 所，覆盖师生近 100,000 人"],
-        images: [
-          { src: "https://images.unsplash.com/photo-1499750310107-5fef28a66643?auto=format&fit=crop&w=1400&q=85", alt: "笔记本电脑与桌面上的写作工具", caption: "可替换为账号后台、内容成片、活动现场或传播数据截图。" }
         ]
       }
     }
